@@ -14,6 +14,7 @@ const classesConfiguration = {
 	sorcerer: "TIDY5E.ClassSorcerer",
 	warlock: "TIDY5E.ClassWarlock",
 	wizard: "TIDY5E.ClassWizard",
+	nightbringer: "TIDY5E.ClassNightbringer",
 	custom: "TIDY5E.ClassCustom"
 };
 
