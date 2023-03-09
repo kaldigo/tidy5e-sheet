@@ -153,6 +153,9 @@ export const mapDefaultColorsRGB = {
 	t5e_alwaysprepared: "rgb(0, 0, 255)",
 	t5e_alwaysprepared_outline: "rgb(65, 105, 225)",
 	t5e_alwaysprepared_accent: "rgb(0, 191, 255)",
+	t5e_spellknown : "rgb(162, 0, 255)",
+	t5e_spellknown_outline : "rgb(153, 65, 225)",
+	t5e_spellknown_accent : "rgb(195, 0, 255)",
 	t5e_magic_accent: "rgb(255, 255, 0)",
 	t5e_faint_magic_accent: "rgb(255, 255, 0)",
 	t5e_magic_outline: "rgb(175, 255, 47)",
@@ -221,6 +224,9 @@ export const mapDefaultColorsRGBA = {
 	t5e_alwaysprepared: "rgba(0, 0, 255, 0.15)",
 	t5e_alwaysprepared_outline: "rgba(65, 105, 225, 1)",
 	t5e_alwaysprepared_accent: "rgba(0, 191, 255, 1)",
+	t5e_spellknown : "rgba(162, 0, 255, 0.15)",
+	t5e_spellknown_outline : "rgba(153, 65, 225, 1)",
+	t5e_spellknown_accent : "rgba(195, 0, 255, 1)",
 	t5e_magic_accent: "rgba(255, 255, 0, 1)",
 	t5e_faint_magic_accent: "rgba(255, 255, 0, 0.6)",
 	t5e_magic_outline: "rgba(175, 255, 47, 1)",
@@ -270,6 +276,7 @@ export const mapDefaultColorsDarkRGBA = {
 	t5e_atwill: "rgba(226, 246, 4, 0.3)",
 	t5e_innate: "rgba(255, 0, 0, 0.3)",
 	t5e_alwaysprepared: "rgba(0, 100, 255, 0.3)",
+	t5e_spellknown : "rgba(162, 100, 255, 0.3)",
 	t5e_icon_background: "rgb(30, 30, 30)",
 	t5e_icon_shadow: "rgba(0, 0, 0, 0.4)",
 	t5e_icon_outline: "rgba(0, 0, 0, 0.4)",
@@ -300,6 +307,9 @@ export const mapDefaultColorsDarkRGBA = {
 
 	t5e_alwaysprepared_outline: "rgba(65, 105, 225, 1)",
 	t5e_alwaysprepared_accent: "rgba(0, 191, 255, 1)",
+
+	t5e_spellknown_outline : "rgba(153, 65, 225, 1)",
+	t5e_spellknown_accent : "rgba(195, 0, 255, 1)",
 
 	t5e_magic_accent: "rgba(255, 255, 0, 1)",
 	t5e_faint_magic_accent: "rgba(255, 255, 0, 0.6)",
@@ -342,6 +352,7 @@ export const mapDefaultColorsDarkRGB = {
 	t5e_atwill: "rgb(226, 246, 4)",
 	t5e_innate: "rgb(255, 0, 0)",
 	t5e_alwaysprepared: "rgb(0, 100, 255)",
+	t5e_spellknown : "rgb(162, 0, 255)",
 	t5e_icon_background: "rgb(30, 30, 30)",
 	t5e_icon_shadow: "rgb(0, 0, 0)",
 	t5e_icon_outline: "rgb(0, 0, 0)",
@@ -372,6 +383,9 @@ export const mapDefaultColorsDarkRGB = {
 
 	t5e_alwaysprepared_outline: "rgb(65, 105, 225)",
 	t5e_alwaysprepared_accent: "rgb(0, 191, 255)",
+
+	t5e_spellknown_outline : "rgb(153, 65, 225)",
+	t5e_spellknown_accent : "rgb(195, 0, 255)",
 
 	t5e_magic_accent: "rgb(255, 255, 0)",
 	t5e_faint_magic_accent: "rgb(255, 255, 0)",
@@ -430,6 +444,9 @@ export function applyColorPickerCustomization(html) {
 		const vColorPickerAlwaysPreparedAccent = HexToRGBA(
 			game.settings.get(CONSTANTS.MODULE_ID, "colorPickerAlwaysPreparedAccent")
 		);
+		const vColorPickerSpellKnown = HexToRGBA(game.settings.get(CONSTANTS.MODULE_ID,'colorPickerSpellKnown'),0.3);
+		const vColorPickerSpellKnownOutline = HexToRGBA(game.settings.get(CONSTANTS.MODULE_ID,'colorPickerSpellKnownOutline'));
+		const vColorPickerSpellKnownAccent = HexToRGBA(game.settings.get(CONSTANTS.MODULE_ID,'colorPickerSpellKnownAccent'));
 
 		// Equipped
 
@@ -1008,6 +1025,82 @@ export function applyColorPickerCustomization(html) {
 					  );
 
 			$(element).css(`box-shadow`, newValue2);
+		});
+
+		// Spell Known
+
+		html.find('.tidy5e-sheet #item-info-container-content .info-card.spellknown').each(function( index, element ) {
+			const curValue = $(element).css(`background`);
+			let newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? curValue.replace(mapDefaultColorsDarkRGBA.t5e_spellknown, vColorPickerSpellKnown)
+				: curValue.replace(mapDefaultColorsRGBA.t5e_spellknown, vColorPickerSpellKnown);
+
+			newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? newValue.replace(mapDefaultColorsDarkRGB.t5e_spellknown, vColorPickerSpellKnown)
+				: newValue.replace(mapDefaultColorsRGB.t5e_spellknown, vColorPickerSpellKnown);
+
+			$(element).css(`background`,newValue);
+		});
+
+		html.find('.tidy5e-sheet .items-list .item.spellknown').each(function( index, element ) {
+			const curValue = $(element).css(`background`);
+			let newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? curValue.replace(mapDefaultColorsDarkRGBA.t5e_spellknown, vColorPickerSpellKnown)
+				: curValue.replace(mapDefaultColorsRGBA.t5e_spellknown, vColorPickerSpellKnown);
+
+			newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? newValue.replace(mapDefaultColorsDarkRGB.t5e_spellknown, vColorPickerSpellKnown)
+				: newValue.replace(mapDefaultColorsRGB.t5e_spellknown, vColorPickerSpellKnown);
+
+			$(element).css(`background`,newValue);
+		});
+
+		html.find('.tidy5e-sheet .grid-layout .item-list .item.spellknown').each(function( index, element ) {
+			const curValue = $(element).css(`-webkit-box-shadow`);
+			let newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? curValue.replace(mapDefaultColorsDarkRGBA.t5e_spellknown_outline, vColorPickerSpellKnownOutline)
+				: curValue.replace(mapDefaultColorsRGBA.t5e_spellknown_outline, vColorPickerSpellKnownOutline);
+
+			newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? newValue.replace(mapDefaultColorsDarkRGB.t5e_spellknown_outline, vColorPickerSpellKnownOutline)
+				: newValue.replace(mapDefaultColorsRGB.t5e_spellknown_outline, vColorPickerSpellKnownOutline);
+
+			$(element).css(`-webkit-box-shadow`,newValue);
+
+			const curValue2 = $(element).css(`box-shadow`);
+			let newValue2 = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? curValue2.replace(mapDefaultColorsDarkRGBA.t5e_spellknown_outline, vColorPickerSpellKnownOutline)
+				: curValue2.replace(mapDefaultColorsRGBA.t5e_spellknown_outline, vColorPickerSpellKnownOutline);
+
+			newValue2 = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? newValue2.replace(mapDefaultColorsDarkRGB.t5e_spellknown_outline, vColorPickerSpellKnownOutline)
+				: newValue2.replace(mapDefaultColorsRGB.t5e_spellknown_outline, vColorPickerSpellKnownOutline);
+
+			$(element).css(`box-shadow`,newValue2);
+		});
+
+		html.find('.tidy5e-sheet .grid-layout .item-list .item.spellknown .item-image').each(function( index, element ) {
+			const curValue = $(element).css(`-webkit-box-shadow`);
+			let newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? curValue.replace(mapDefaultColorsDarkRGBA.t5e_spellknown_accent, vColorPickerSpellKnownAccent)
+				: curValue.replace(mapDefaultColorsRGBA.t5e_spellknown_accent, vColorPickerSpellKnownAccent);
+			
+			newValue = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? newValue.replace(mapDefaultColorsDarkRGB.t5e_spellknown_accent, vColorPickerSpellKnownAccent)
+				: newValue.replace(mapDefaultColorsRGB.t5e_spellknown_accent, vColorPickerSpellKnownAccent);
+
+			$(element).css(`-webkit-box-shadow`,newValue);
+
+			const curValue2 = $(element).css(`box-shadow`);
+			let newValue2 = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? curValue2.replace(mapDefaultColorsDarkRGBA.t5e_spellknown_accent, vColorPickerSpellKnownAccent)
+				: curValue2.replace(mapDefaultColorsRGBA.t5e_spellknown_accent, vColorPickerSpellKnownAccent);
+
+			newValue2 = game.settings.get(CONSTANTS.MODULE_ID, "colorScheme") === "dark"
+				? newValue2.replace(mapDefaultColorsDarkRGB.t5e_spellknown_accent, vColorPickerSpellKnownAccent)
+				: newValue2.replace(mapDefaultColorsRGB.t5e_spellknown_accent, vColorPickerSpellKnownAccent);
+
+			$(element).css(`box-shadow`,newValue2);
 		});
 	}
 }

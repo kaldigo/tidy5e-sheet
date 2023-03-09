@@ -101,6 +101,10 @@
 				box-shadow: 0 0 0 2px var(--t5e-alwaysprepared-outline);
 			}
 
+			&.prepared.spellknown {
+				box-shadow: 0 0 0 2px var(--t5e-spellknown-outline);
+			}
+
 			&.equipped .item-image {
 				box-shadow: 0 0 1px 1px inset var(--t5e-equipped-accent);
 				border-radius: 5px;
@@ -128,6 +132,10 @@
 
 			&.prepared.alwaysprepared .item-image {
 				box-shadow: 0 0 1px 1px inset var(--t5e-alwaysprepared-accent);
+			}
+
+			&.prepared.spellknown .item-image {
+    		box-shadow: 0 0 1px 1px inset var(--t5e-spellknown-accent);
 			}
 
 			&.magic-item {

@@ -1058,6 +1058,35 @@ export function settingsList() {
 		config: false
 	});
 
+	// --t5e-spellknown: 			rgba(162, 0, 255, 0.15);
+	// --t5e-spellknown-outline: 	rgba(153, 65, 225, 1);
+	// --t5e-spellknown-accent: 	rgba(195, 0, 255, 1);
+
+	game.settings.register(CONSTANTS.MODULE_ID, "colorPickerSpellKnown", {
+		name: `${game.i18n.localize("TIDY5E.Settings.ColorPickerSpellKnown.name")}`,
+		hint: `${game.i18n.localize("TIDY5E.Settings.ColorPickerSpellKnown.hint")}`,
+		scope: "client",
+		type: String,
+		default: RGBAToHexAFromColor(0,0,255,.15),
+		config: false,
+	});
+	game.settings.register(CONSTANTS.MODULE_ID, "colorPickerSpellKnownOutline", {
+		name: `${game.i18n.localize("TIDY5E.Settings.ColorPickerSpellKnownOutline.name")}`,
+		hint: `${game.i18n.localize("TIDY5E.Settings.ColorPickerSpellKnownOutline.hint")}`,
+		scope: "client",
+		type: String,
+		default: RGBAToHexAFromColor(65,105,225,1),
+		config: false,
+	});
+	game.settings.register(CONSTANTS.MODULE_ID, "colorPickerSpellKnownAccent", {
+		name: `${game.i18n.localize("TIDY5E.Settings.ColorPickerSpellKnownAccent.name")}`,
+		hint: `${game.i18n.localize("TIDY5E.Settings.ColorPickerSpellKnownAccent.hint")}`,
+		scope: "client",
+		type: String,
+		default: RGBAToHexAFromColor(0,191,255,1),
+		config: false,
+	});
+
 	// ===============================
 	// Homebrew Rules
 	// ===============================

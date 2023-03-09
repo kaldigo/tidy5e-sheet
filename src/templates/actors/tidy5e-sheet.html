@@ -71,6 +71,7 @@
 								<i class="far fa-tired"></i>
 								<i class="far fa-dizzy"></i>
 							</div>
+							
 							<ul class="exhaust-level">
 								<li data-elvl="0">0</li>
 								<li data-elvl="1">1</li>
@@ -79,6 +80,10 @@
 								<li data-elvl="4">4</li>
 								<li data-elvl="5">5</li>
 								<li data-elvl="6">6</li>
+								<li data-elvl="7">7</li>
+								<li data-elvl="8">8</li>
+								<li data-elvl="9">9</li>
+								<li data-elvl="10">10</li>
 							</ul>
 						</div>
 					</div>
@@ -199,7 +204,7 @@
 								</ul>
 							</li>
 						</ul>
-                        <span class="origin-summary-text" data-tooltip="{{system.details.race}}" data-placeholder="{{ localize 'DND5E.Race' }}">{{system.details.race}}</span>
+                        <span class="origin-summary-text" data-tooltip="{{system.details.race}}" data-placeholder="{{ localize 'DND5E.Race' }}">{{#if labels.race}}{{labels.race}}{{else}}{{system.details.race}}{{/if}}</span>
 						<span class="origin-summary-text" data-tooltip="{{system.details.background}}" data-placeholder="{{ localize 'DND5E.Background' }}">{{#if labels.background}}{{labels.background}}{{else}}{{system.details.background}}{{/if}}</span>
 						<span class="origin-summary-text" data-tooltip="{{system.details.alignment}}" data-placeholder="{{ localize 'DND5E.Alignment' }}">{{system.details.alignment}}</span>
 					</li>

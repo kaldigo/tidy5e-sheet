@@ -48,6 +48,9 @@
 	--t5e-alwaysprepared: rgba(0, 0, 255, 0.15);
 	--t5e-alwaysprepared-outline: rgba(65, 105, 225, 1);
 	--t5e-alwaysprepared-accent: rgba(0, 191, 255, 1);
+	--t5e-spellknown: rgba(162, 0, 255, 0.15);
+	--t5e-spellknown-outline: rgb(153, 65, 225);
+	--t5e-spellknown-accent: rgb(195, 0, 255);
 
 	--t5e-magic-accent: rgba(255, 255, 0, 1);
 	--t5e-faint-magic-accent: rgba(255, 255, 0, 0.6);
@@ -79,8 +82,15 @@
 
 	//exhaustion
 	--t5e-exhaustion-lvl1: rgba(255, 230, 0, 1);
-	--t5e-exhaustion-lvl2: rgba(255, 130, 0, 1);
-	--t5e-exhaustion-lvl3: rgba(255, 50, 0, 1);
+	--t5e-exhaustion-lvl2: rgba(255, 210, 0, 1);
+	--t5e-exhaustion-lvl3: rgba(255, 190, 0, 1);
+	--t5e-exhaustion-lvl4: rgba(255, 170, 0, 1);
+	--t5e-exhaustion-lvl5: rgba(255, 150, 0, 1);
+	--t5e-exhaustion-lvl6: rgba(255, 130, 0, 1);
+	--t5e-exhaustion-lvl7: rgba(255, 110, 0, 1);
+	--t5e-exhaustion-lvl8: rgba(255, 90, 0, 1);
+	--t5e-exhaustion-lvl9: rgba(255, 70, 0, 1);
+	--t5e-exhaustion-lvl10: rgba(255, 50, 0, 1);
 
 	--t5e-ability-accent: darkslategrey;
 	// context menu

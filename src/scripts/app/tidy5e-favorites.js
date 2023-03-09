@@ -335,6 +335,8 @@ export const addFavorites = async function (app, html, data, position) {
 							favSpellsPrepMode["innate"].spells.push(item);
 						} else if (item.system.preparation.mode == "pact") {
 							favSpellsPrepMode["pact"].spells.push(item);
+						} else if (item.system.preparation.mode == "known") {
+              item.spellKnown = true;
 						}
 						spellPrepModeCount++;
 					} else {

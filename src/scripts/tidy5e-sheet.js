@@ -174,6 +174,14 @@ export class Tidy5eSheet extends dnd5e.applications.actor.ActorSheet5eCharacter 
 			context.exhaustionTooltip = exhaustionTooltipPrefix + `, ${game.i18n.localize("TIDY5E.Exhaustion5")}`;
 		} else if (this.actor.system.attributes.exhaustion === 6) {
 			context.exhaustionTooltip = exhaustionTooltipPrefix + `, ${game.i18n.localize("TIDY5E.Exhaustion6")}`;
+		} else if (this.actor.system.attributes.exhaustion === 7) {
+			context.exhaustionTooltip = exhaustionTooltipPrefix + `, ${game.i18n.localize("TIDY5E.Exhaustion7")}`;
+		} else if (this.actor.system.attributes.exhaustion === 8) {
+			context.exhaustionTooltip = exhaustionTooltipPrefix + `, ${game.i18n.localize("TIDY5E.Exhaustion8")}`;
+		} else if (this.actor.system.attributes.exhaustion === 9) {
+			context.exhaustionTooltip = exhaustionTooltipPrefix + `, ${game.i18n.localize("TIDY5E.Exhaustion9")}`;
+		} else if (this.actor.system.attributes.exhaustion === 10) {
+			context.exhaustionTooltip = exhaustionTooltipPrefix + `, ${game.i18n.localize("TIDY5E.Exhaustion10")}`;
 		} else {
 			context.exhaustionTooltip = exhaustionTooltipPrefix;
 		}

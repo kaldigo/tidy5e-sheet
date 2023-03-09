@@ -148,6 +148,12 @@
 			// box-shadow: 0 0 10px var(--t5e-alwaysprepared) inset;
 		}
 
+		&.spellknown {
+		  background: var(--t5e-spellknown);
+		  background: linear-gradient(180deg, var(--t5e-spellknown) 0px, var(--t5e-spellknown) 26px, rgba(0, 0, 0, 0) 36px);
+		  // box-shadow: 0 0 10px var(--t5e-spellknown) inset;
+		}
+
 		&.magic-item {
 			box-shadow: 0 0 6px 2px var(--t5e-magic-accent) inset;
 		}

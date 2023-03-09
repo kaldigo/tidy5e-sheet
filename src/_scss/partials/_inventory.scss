@@ -510,6 +510,10 @@
 			background: var(--t5e-alwaysprepared);
 		}
 
+		&.spellknown {
+		  background: var(--t5e-spellknown);
+		}
+
 		.item-name .item-image {
 			flex: 0 0 24px;
 			height: 24px;

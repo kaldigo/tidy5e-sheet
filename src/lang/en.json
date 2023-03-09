@@ -16,12 +16,16 @@
 	"TIDY5E.ShowItemArt": "show image",
 
 	"TIDY5E.Exhaustion0": "No negative effects",
-	"TIDY5E.Exhaustion1": "Disadvantage on Ability Checks",
-	"TIDY5E.Exhaustion2": "Speed halved",
-	"TIDY5E.Exhaustion3": "Disadvantage on Attack rolls and Saving Throws",
-	"TIDY5E.Exhaustion4": "Hit point maximum halved",
-	"TIDY5E.Exhaustion5": "Speed reduced to 0",
-	"TIDY5E.Exhaustion6": "Death",
+	"TIDY5E.Exhaustion1": "-1 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion2": "-2 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion3": "-3 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion4": "-4 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion5": "-5 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion6": "-6 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion7": "-7 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion8": "-8 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion9": "-9 to d20 rolls and Spell Save DC",
+	"TIDY5E.Exhaustion10": "Death",
 
 	"TIDY5E.AbbrInitiative": "Ini",
 
@@ -557,6 +561,18 @@
 	"TIDY5E.Settings.ColorPickerAlwaysPreparedAccent": {
 		"name": "Color Picker for 'Always Prepared Accent'",
 		"hint": "Select what color you want to use for 'Always Prepared Accent'. The transparency value '#00000000' is equivalent to disabling the color for the current context."
+	},
+	"TIDY5E.Settings.ColorPickerSpellKnown": {
+		"name": "Color Picker for 'Spell Known'",
+		"hint": "Select what color you want to use for 'Spell Known'. The transparency value '#00000000' is equivalent to disabling the color for the current context."
+	},
+	"TIDY5E.Settings.ColorPickerSpellKnownOutline": {
+		"name": "Color Picker for 'Spell Known Outline'",
+		"hint": "Select what color you want to use for 'Spell Known Outline'. The transparency value '#00000000' is equivalent to disabling the color for the current context."
+	},
+	"TIDY5E.Settings.ColorPickerSpellKnownAccent": {
+		"name": "Color Picker for 'Spell Known Accent'",
+		"hint": "Select what color you want to use for 'Spell Known Accent'. The transparency value '#00000000' is equivalent to disabling the color for the current context."
 	},
   "TIDY5E.Settings.AllowHpMaxOverride": {
 		"name": "Allow Hp Max override on Character",

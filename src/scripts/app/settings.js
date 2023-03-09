@@ -142,6 +142,9 @@ export class Tidy5eUserSettings extends FormApplication {
 			"colorPickerAlwaysPrepared",
 			"colorPickerAlwaysPreparedOutline",
 			"colorPickerAlwaysPreparedAccent",
+			'colorPickerSpellKnown',
+			'colorPickerSpellKnown',
+			'colorPickerSpellKnown',
 
 			"hbEnableUpcastFreeSpell",
 			"hbSetFeaturesForUpcastFreeSpell",
